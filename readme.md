@@ -1,5 +1,5 @@
 <h1>1 背景</h1>
-该项目的代码是参加 [阿里云安全算法挑战赛](https://tianchi.aliyun.com/competition/information.htm?raceId=231585) 时写的。<br>
+该项目的代码是参加 <a href="https://tianchi.aliyun.com/competition/information.htm?raceId=231585">阿里云安全算法挑战赛</a>时写的。<br>
 <br>
 <h1>2 成绩</h1>
 第29名<br>
