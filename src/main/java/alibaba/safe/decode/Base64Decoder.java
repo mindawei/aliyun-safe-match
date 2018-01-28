@@ -2,6 +2,10 @@ package alibaba.safe.decode;
 
 import Decoder.BASE64Decoder;
 
+/**
+ * Base64 解码
+ * @author mindw
+ */
 public class Base64Decoder implements Decoder {
 
 	@Override

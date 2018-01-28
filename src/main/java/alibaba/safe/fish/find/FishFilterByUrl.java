@@ -8,8 +8,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import alibaba.safe.fish.find.FishFilter.Type;
-import alibaba.safe.fish.find.white.White0;
-import alibaba.safe.fish.find.white.Whites;
 
 /** 从网页本身中找出域名 */
 public class FishFilterByUrl {

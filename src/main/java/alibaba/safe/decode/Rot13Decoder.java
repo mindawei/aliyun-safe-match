@@ -1,5 +1,9 @@
 package alibaba.safe.decode;
 
+/**
+ * ROT13（回转13位，rotateby13places，有时中间加了个减号称作ROT-13）是一种简易的置换暗码。
+ * @author mindw
+ */
 public class Rot13Decoder implements Decoder {
 
 	@Override

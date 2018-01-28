@@ -1,35 +1,17 @@
 package alibaba.safe.fish.find;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javax.jws.WebService;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
-
-
-
-
-
-
-import alibaba.safe.fish.find.white.Whites;
 
 
 public class FishFilter {
@@ -231,7 +213,6 @@ public class FishFilter {
 //      	    	
 	   
 	}
-	
 	
 
 	/** 内容是否敏感 */

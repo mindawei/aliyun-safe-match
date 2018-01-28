@@ -1,10 +1,8 @@
 package alibaba.safe.fish.find;
 
 import java.net.InetAddress;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.UnknownHostException;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -215,10 +213,6 @@ public class Util {
 	 * 获得网站的名字
 	 * 欢迎来到京东商城！ -> 京东商城
 	 */
-		
-	
-	
-
 	
 //	public static void main(String[] args) {
 //		

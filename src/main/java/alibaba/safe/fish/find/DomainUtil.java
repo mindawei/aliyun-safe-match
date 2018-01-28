@@ -1,19 +1,9 @@
 package alibaba.safe.fish.find;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
-import java.util.regex.Pattern;
-
-import sun.font.EAttribute;
-import alibaba.safe.fish.find.white.FileUtil;
 
 public class DomainUtil {
 	
@@ -402,7 +392,7 @@ public class DomainUtil {
 	}
 
 	/** 是否不易分辨 */
-	private static boolean like(String needCheckDomain, String domain) {
+	public static boolean like(String needCheckDomain, String domain) {
 		return t(needCheckDomain).equals(t(domain));
 	}
 	

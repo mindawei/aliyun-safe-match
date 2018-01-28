@@ -1,10 +1,6 @@
 package alibaba.safe.fish.find;
 
-import java.net.InetAddress;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class UrlFilter {
 	

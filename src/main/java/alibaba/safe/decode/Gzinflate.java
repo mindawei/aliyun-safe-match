@@ -3,40 +3,47 @@ package alibaba.safe.decode;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.ByteBuffer;
 import java.util.zip.GZIPInputStream;
-import java.util.zip.Inflater;
-import java.util.zip.InflaterInputStream;
 
-public class Gzinflate implements Decoder{
+/**
+ * GZIP 压缩
+ * 
+ * @author mindw
+ */
+public class Gzinflate implements Decoder {
 
-	@Override
-	@Deprecated
 	public String decode(String str) {
-	
-		
-		//InputStream inflInstream = new InflaterInputStream(new ByteArrayInputStream(str.getBytes()), 
-        //        new Inflater());
-
-		StringBuilder builder = new StringBuilder();
-		
-		try {
-			
-		InputStream inflInstream = new GZIPInputStream(new ByteArrayInputStream( str.getBytes() ));
-
-		byte bytes[] = new byte[1024];
-
-		int length;
-		while (true) {
-				length = inflInstream.read(bytes, 0, 1024);
-				if (length == -1)  
-					break;
-				for(int i=0;i<length;++i)
-					builder.append(bytes[i]);
-		}
-		
-		} catch (IOException e) {}
-	
-		return builder.toString();
+		throw new UnsupportedOperationException("");
 	}
 
+	/** 解析 byte 数组*/
+	public String decode(byte[] strBytes) {
+
+		try {
+
+			InputStream inflInstream = new GZIPInputStream(new ByteArrayInputStream(strBytes));
+			byte bytes[] = new byte[1024];
+			ByteBuffer byteBuffer = ByteBuffer.allocate(1024 * 10);
+			int length;
+			while (true) {
+				length = inflInstream.read(bytes, 0, 1024);
+				if (length == -1)
+					break;
+				for (int i = 0; i < length; ++i)
+					byteBuffer.put(bytes[i]);
+			}
+
+			byteBuffer.flip();
+			byte[] data = new byte[byteBuffer.limit()];
+			byteBuffer.get(data);
+
+			return new String(data);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
 }

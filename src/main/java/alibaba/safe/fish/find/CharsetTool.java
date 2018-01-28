@@ -1,6 +1,5 @@
 package alibaba.safe.fish.find;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 
 public class CharsetTool {

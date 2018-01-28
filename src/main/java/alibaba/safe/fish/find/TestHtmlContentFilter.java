@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.net.URLConnection;
 
 public class TestHtmlContentFilter {
 	public static void main(String[] args) throws IOException {
@@ -16,7 +15,7 @@ public class TestHtmlContentFilter {
 			
 		File file = new File("5.html");
 		BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(new FileInputStream(file),"utf-8"));
-		//BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(new FileInputStream(file),"gb2312"));
+		// BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(new FileInputStream(file),"gb2312"));
 
 		StringBuilder builder = new StringBuilder();
 		

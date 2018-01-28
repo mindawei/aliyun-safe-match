@@ -1,10 +1,7 @@
 package alibaba.safe.fish.find;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
-
 import com.aliyun.odps.OdpsException;
 import com.aliyun.odps.data.Record;
 import com.aliyun.odps.data.TableInfo;
