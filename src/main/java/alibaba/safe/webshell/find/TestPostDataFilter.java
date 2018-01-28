@@ -5,8 +5,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-import alibaba.safe.decode.Base64Decoder;
-import alibaba.safe.decode.UrlDecoder;
+import alibaba.safe.utils.decode.Base64Decoder;
+import alibaba.safe.utils.decode.UrlDecoder;
 
 public class TestPostDataFilter {
 	public static void main(String[] args) throws IOException {

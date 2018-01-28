@@ -13,20 +13,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import alibaba.safe.utils.XnTool;
+
 
 public class FishFilter {
 	
-	
-	
-	
-//	static Pattern p = Pattern.compile(("(^|([^\u4E00-\u9FA5]+))"+"支付宝"+"($|([^\u4E00-\u9FA5+]))"));
-//	public static void main(String[] args) {
-//		Matcher matcher = p.matcher("寄无忧|Q币提现|Q币换钱|回收Q币|Q币换点卡|Q币收购|Q币提现财付通|Q币提支付宝|Q币提现财付通");
-//		System.out.println(matcher.find());
-//	}
-//	
-
-
 	// 获得标题
 	String getTitle(String htmlContent){
 		String charset = getCharset(htmlContent);	
@@ -77,7 +68,7 @@ public class FishFilter {
 			return true;
 		
 //		// 检测中文名字是否包含敏感词
-		String chinese = CharsetTool.getChineseInUrl(url).toLowerCase();	
+		String chinese = XnTool.getChineseInUrl(url).toLowerCase();	
 		// find num:10
 		if(chinese.contains("欢迎")||chinese.contains("官网")||chinese.contains("官方网站")){
 			if(chinese.contains("jd")

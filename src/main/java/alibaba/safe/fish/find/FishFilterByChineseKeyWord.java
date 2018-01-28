@@ -7,10 +7,8 @@ import java.util.regex.Pattern;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
 import alibaba.safe.fish.find.FishFilter.Type;
-import alibaba.safe.fish.find.white.Whites;
+import alibaba.safe.fish.find.white.WhiteList;
 
 public class FishFilterByChineseKeyWord {
 	
@@ -44,8 +42,6 @@ public class FishFilterByChineseKeyWord {
 		
 		key2domain.put("京ICP备10052455号", "boc");
 		key2domain.put("京公网安备110102002036号", "boc");
-		
-		
 	}
 	
 	public static Type filter(Document document, String url) {
@@ -162,7 +158,7 @@ public class FishFilterByChineseKeyWord {
 		
 		String _host =  DomainUtil.getApplyDomainByHost(host);
 		
-		String realHost = Whites.getHost(chineseName);
+		String realHost = WhiteList.getHost(chineseName);
 		
 		if (realHost != null) {			
 			if(_host.length()<=realHost.length()) // 如果域名较短则应该是安全的
@@ -178,7 +174,7 @@ public class FishFilterByChineseKeyWord {
 		
 		String _host =  DomainUtil.getApplyDomainByHost(host);
 		
-		String realHost = Whites.getHost(chineseName);
+		String realHost = WhiteList.getHost(chineseName);
 		if (realHost != null) {			
 			
 			if(_host.length()<=realHost.length()) // 如果域名较短则应该是安全的

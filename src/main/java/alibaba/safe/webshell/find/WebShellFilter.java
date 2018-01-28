@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import alibaba.safe.fish.find.white.FileUtil;
+import alibaba.safe.utils.FileUtil;
 
 public class WebShellFilter {
 	

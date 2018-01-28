@@ -5,11 +5,15 @@ import java.net.URL;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 主要根据域名判断是否有问题
+ * @author mindw
+ */
 public class DomainUtil {
-	
+
 	/** 常用域名结尾 */
 	private static Set<String> domains = new HashSet<String>();
-	static{
+	static {
 		domains.add("com");
 		domains.add("top");
 		domains.add("win");
@@ -291,18 +295,17 @@ public class DomainUtil {
 		domains.add("org");
 		domains.add("rec");
 		domains.add("store");
-		domains.add("web");		
+		domains.add("web");
 	}
-	
-	
+
 	/** 获得域名 */
-	public static String getApplyDomainByUrl(String url){
+	public static String getApplyDomainByUrl(String url) {
 		try {
 			String host = new URL(url).getHost();
 			String[] hostParts = host.split("\\.");
-			for(int i = hostParts.length-1;i>=0;i--){
+			for (int i = hostParts.length - 1; i >= 0; i--) {
 				String part = hostParts[i];
-				if(domains.contains(part))
+				if (domains.contains(part))
 					continue;
 				else
 					return part;
@@ -312,7 +315,7 @@ public class DomainUtil {
 		}
 		return "";
 	}
-	
+
 	/** 获得域名 */
 	public static String getApplyDomainByHost(String host) {
 		String[] hostParts = host.split("\\.");
@@ -325,109 +328,84 @@ public class DomainUtil {
 		}
 		return "";
 	}
-	
-	private static Set<String> applyDomains = new HashSet<String>();
 
-	static{
-		
+	private static Set<String> applyDomains = new HashSet<String>();
+	static {
 		applyDomains.add("taobao");
 		applyDomains.add("tmall");
 		applyDomains.add("jd");
-//		applyDomains.add("vmall");
-//		applyDomains.add("abchina");
-//		applyDomains.add("10086");		
+		applyDomains.add("vmall");
+		applyDomains.add("abchina");
+		applyDomains.add("10086");
 	}
-	
-	
-	
-	public static boolean isFish(String needCheckUrl,String htmlContent){
-		
-		
+
+	public static boolean isFish(String needCheckUrl, String htmlContent) {
+
 		String needCheckDomain = getApplyDomainByUrl(needCheckUrl.toLowerCase());
+
+		for (String domain : applyDomains) {
+			if (needCheckDomain.equals(domain))
+				return false;
+			for (String needCheckPart : needCheckDomain.split("-")) {
+				if (like(needCheckPart, domain)) {
+					return true;
+				}
+			}
+		}
 		
-		
-//		for(String domain : applyDomains){
-//		if(needCheckDomain.equals(domain))
-//			return false;
-//		for(String needCheckPart : needCheckDomain.split("-")){
-//			if(like(needCheckPart, domain)){
-//				return true;
-//			}
-//		}
-//	}
 		// http://l0086-vip.pw
-		// http://www.10086yna.pw		
-	
-		if(needCheckDomain.equals("1212-tmall")
-				||needCheckDomain.equals("52-taobao")
-				||needCheckDomain.equals("liuguoping")
-				||needCheckDomain.equals("l0086-vip")
-				||needCheckDomain.equals("10086yna")
-				)
+		// http://www.10086yna.pw
+
+		// 黑名单
+		if (needCheckDomain.equals("1212-tmall") || needCheckDomain.equals("52-taobao")
+				|| needCheckDomain.equals("liuguoping") || needCheckDomain.equals("l0086-vip")
+				|| needCheckDomain.equals("10086yna"))
 			return true;
-		
-		
-//		String host = Util.getHost(needCheckUrl);
-//		if(host!=null && (host.endsWith(".pw"))){
-//			
-//			if(htmlContent.contains("网址导航")&&htmlContent.contains("网址大全")||htmlContent.contains("上网导航"))
-//				return false;
-//			if(htmlContent.contains("淘宝网")
-//					||htmlContent.contains("京东商城")
-//					||htmlContent.contains("中国移动"))
-//				return true;
-//			
-//			return false;
-//		}
-		
-//		
-//		for(String domain : applyDomains){
-//			if(needCheckUrl.contains(domain)){
-//				return true;
-//			}
-//		}
+
+		String host = Util.getHost(needCheckUrl);
+		if (host != null && (host.endsWith(".pw"))) {
+
+			if (htmlContent.contains("网址导航") && htmlContent.contains("网址大全") || htmlContent.contains("上网导航"))
+				return false;
+			if (htmlContent.contains("淘宝网") || htmlContent.contains("京东商城") || htmlContent.contains("中国移动"))
+				return true;
+
+			return false;
+		}
+
+		for (String domain : applyDomains) {
+			if (needCheckUrl.contains(domain)) {
+				return true;
+			}
+		}
 
 		return false;
-		
+
 	}
 
 	/** 是否不易分辨 */
-	public static boolean like(String needCheckDomain, String domain) {
+	private static boolean like(String needCheckDomain, String domain) {
 		return t(needCheckDomain).equals(t(domain));
 	}
-	
+
 	/** 转换 */
-	private static String t(String s){
+	private static String t(String s) {
 		StringBuilder builder = new StringBuilder();
-		for(char ch : s.toCharArray()){
-			if(ch=='0'||ch=='o'){
+		for (char ch : s.toCharArray()) {
+			if (ch == '0' || ch == 'o') {
 				builder.append('!');
-			}else if(ch=='1'||ch=='l'){
+			} else if (ch == '1' || ch == 'l') {
 				builder.append('@');
-			}else{
+			} else {
 				builder.append(ch);
 			}
-			
+
 		}
 		return builder.toString();
 	}
-	
-	
-//	public static void main(String[] args) {
-//		System.out.println(isFish("http://www.11-2staobao",""));
-//	}
-	
-	
-//	public static void main(String[] args) throws IOException {
-////		BufferedReader reader = new BufferedReader(new FileReader(FileUtil.getBaseFilePath()+"\\顶级域名.csv"));
-////		String line =null;
-////		while((line= reader.readLine())!=null){
-////			String domain = line.split(",")[0];
-////			System.out.println("domains.add(\""+domain+"\");");
-////			
-////		}
-//		System.out.println(getApplyDomain("http://cn.com"));
-//		
-//	}
-	
+
+	public static void main(String[] args) {
+		System.out.println(DomainUtil.isFish("http://www.11-2staobao", ""));
+	}
+
 }

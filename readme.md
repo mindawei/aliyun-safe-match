@@ -15,7 +15,8 @@
 * 进行正则表达式匹配<br>
 
 
-# 项目结构
-1. `alibaba.safe.decode` 包中是一些解码类。`src/teat/java` 中的 `TestDecoder` 类对解析进行了测试，也说明了如何使用它们。
+# 3 项目结构
+1. `alibaba.safe.utls.decode` 包中是一些解码类。[TestDecoder](https://github.com/mindawei/aliyun-safe-match/blob/master/src/test/java/alibaba/safe/decode/TestDecoder.java) 类对解析进行了测试，也说明了如何使用它们。
 
 2. `alibaba.safe.fish.find` 包中主要用来寻找钓鱼网站。
+
