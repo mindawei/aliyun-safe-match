@@ -1,31 +1,21 @@
 package safe.fish;
 
-import java.net.URL;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import safe.fish.utils.DomainUtil;
-
+/**
+ * 检测钓鱼网站
+ * @author mindw
+ */
 public class FishFilter {
 	
-	// 通过标题、空白值比例（"id","style","href","src","action"）等判断
-	
-	public enum Type{
-		FISH,
-		UNKNOWN,
-		GOOD
-	}
-	
 	/** 是否是钓鱼网站 ：判断url是是否正确的本质是，找出该网站真正的url　*/
-	public boolean isFish(String url,String htmlContent) {
+	public static boolean isFish(String URL,String HTML) {
 		
-		PageInfo pageInfo = new PageInfo(url,htmlContent);
+		PageInfo pageInfo = new PageInfo(URL,HTML);
 	
 		// 根据欢迎来到...、标题 等提取关键词，判断url是否相同
-		if(DomainUtil.isFish(pageInfo)) {
+		if(moniWellKnown(pageInfo)) {
 			return true;
 		}
 		
@@ -39,125 +29,111 @@ public class FishFilter {
 			}
 		}
 			
-		// 获得域名
+		// 获得主机名
 		String host = pageInfo.getHost();
-		// cn 需要实名登记，org 不盈利
-		if (host.endsWith(".cn") || host.endsWith(".org")) {
-			return false;
-		}
-
-		if (pageInfo.getDomain().length() == 0) {
+		// cn 需要实名登记; org 不盈利 ; .comj较短的代价大
+		if (host.endsWith(".cn") || host.endsWith(".org")
+				||(host.endsWith(".com") && pageInfo.getDomain().length() <= 7) ) {
 			return false;
 		}
 		
-		if (host.endsWith(".com") && pageInfo.getDomain().length() <= 7) {
-			return false;	
+		// 获得域名
+		String domain = pageInfo.getDomain();
+		if(domain.length()<=6
+				||domain.contains("121mai") // 申请多个域名的网站
+				||domain.equals("my3w") // 临时域名 
+				||domain.equals("chinaw3") // 临时域名 
+				) {
+			return true;
 		}
+		
+		Result result = Result.UNKNOWN;
 		
 		// 根据内容中的url，和主页是否匹配
-		Type type = filter(pageInfo);
-		if(type==Type.FISH){
+		result = DomainConflictChecker.check(pageInfo);
+		if(result==Result.FISH){
 			return true;
-		}else if(type==Type.GOOD){
+		}else if(result==Result.GOOD){
 			return false;
 		}
-	
 
 		// 根据欢迎来到...、标题 等提取关键词，判断url是否相同
-		type = SiteNameChecker.filter(pageInfo);
-		if(type==Type.FISH){
+		result = PageKeyChecker.check(pageInfo);
+		if(result==Result.FISH){
 			return true;
-		}else if(type==Type.GOOD){
+		}else if(result==Result.GOOD){
 			return false;
 		}
 		
 		return false;	   
 	}
-
-
-	/// >> 从网页本身中找出域名 
-	public static Set<String> keys = new HashSet<String>();
+	
+	
+	private static final Set<String> WELL_KNOWNS = new HashSet<String>();
 	static {
-		keys.add("首页");
-//		keys.add("网站首页");
-//		keys.add("主页");
-//		keys.add("登录");
-//		keys.add("注册");
-//		keys.add("关于我们");
-//		keys.add("关于");
+		WELL_KNOWNS.add("taobao");
+		WELL_KNOWNS.add("tmall");
+		WELL_KNOWNS.add("jd");
+		WELL_KNOWNS.add("vmall");
+		WELL_KNOWNS.add("abchina");
+		WELL_KNOWNS.add("10086");
 	}
-	
-	public static Type filter(PageInfo pageInfo) {
-	
+
+	/** 是否模仿知名网站 */
+	public static boolean moniWellKnown(PageInfo pageInfo) {
+
+		String url = pageInfo.getUrl();
 		String host = pageInfo.getHost();
-		if(host==null // 无法解析
-				||host.matches("\\d+\\.\\d+\\.\\d+\\.\\d+") // 124.0.0.1 不考虑
-				||host.contains("xn--")// 中文不考虑
-				||host.endsWith(".com.cn")
-				||host.endsWith(".com")
-				||host.endsWith(".net")) 
-			return Type.UNKNOWN;
+		String domain = pageInfo.getDomain();
+		String html = pageInfo.getHtml();
 		
-		String applyDomain = pageInfo.getDomain();
-		if(applyDomain.length()<=6
-				||applyDomain.contains("121mai") // 申请多个域名的网站
-				||applyDomain.equals("my3w") // 临时域名 
-				||applyDomain.equals("chinaw3") // 临时域名 
-				) {
-			return Type.GOOD;
-		}
-		
-		Elements elements = pageInfo.getDocument().select("a[href]");
-		for (Element element : elements) {
-			
-			String href = element.attr("href");
-			String text = element.text().replaceAll("(\\s)+", "");
-			
-			// qq 聊天
-			if(href.contains(".qq.com")
-					||href.contains(".baidu.com"))
-				continue;
-			
-			if (keys.contains(text)) {
-				
-				if(!href.startsWith("http")) { // 当前目录一类
-					return Type.UNKNOWN; 
+		// 是否和知名网站相似
+		for (String wellKnown : WELL_KNOWNS) {
+			if (domain.equals(wellKnown)) {
+				return false;
+			}
+			if (url.contains(wellKnown)) {
+				return true;
+			}
+			for (String domainPart : domain.split("-")) {
+				// 是否不易分辨
+				if(t(domainPart).equals(t(wellKnown))) {
+					return true;
 				}
-				
-				String hrefHost = null;
-				
-				try {
-					 hrefHost = new URL(href).getHost();
-				} catch (Exception e) {}
-				
-				if (hrefHost != null) { // 首页指向ip地址威胁不大，而且容易暴露，一般是企业自己知道的
-					if (hrefHost.matches("\\d+\\.\\d+\\.\\d+\\.\\d+")
-							|| hrefHost.equals("localhost")
-							|| hrefHost.endsWith("wezhan.cn")) { // 微站
-						continue;
-					}
-				}
-
-				// 获得域名
-				String hrefDomain = DomainUtil.getApplyDomainByUrl(href);
-				if(hrefDomain.length()==0)
-					continue;
-				
-				if (hrefDomain != null) {
-					// url 更难申请，或者很短
-					if(applyDomain.length()<=hrefDomain.length())
-						return Type.UNKNOWN;
-								
-					if (applyDomain.equals(hrefDomain.toLowerCase()))
-						return Type.GOOD;
-					else{
-						return Type.FISH;	
-					}
-				}
-
 			}
 		}
 		
-		return Type.UNKNOWN;
+		// 黑名单
+		if (domain.equals("1212-tmall") || domain.equals("52-taobao") || domain.equals("liuguoping") || domain.equals("l0086-vip") || domain.equals("10086yna")) {
+			return true;
+		}
+
+		if (host != null && host.endsWith(".pw")) {
+			if (html.contains("网址导航") || html.contains("网址大全") || html.contains("上网导航")) {
+				return false;
+			}
+			
+			if (html.contains("淘宝网") || html.contains("京东商城") || html.contains("中国移动")) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
+
+	/** 转换 */
+	private static String t(String s) {
+		StringBuilder builder = new StringBuilder();
+		for (char ch : s.toCharArray()) {
+			if (ch == '0' || ch == 'o') {
+				builder.append('!');
+			} else if (ch == '1' || ch == 'l') {
+				builder.append('@');
+			} else {
+				builder.append(ch);
+			}
+		}
+		return builder.toString();
+	}
+	
 }

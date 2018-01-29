@@ -19,21 +19,26 @@ import org.apache.commons.csv.CSVParser;
 public class DataLoader {
 
 	public static final String FISH_BASE_FILE_PATH = "data\\fish\\";
+	
+	/** 道路网站名和网址的映射（补充的热门的几个） */
+	public static Map<String, String> loadKeysMap() {
+		return _loadMap(FISH_BASE_FILE_PATH + "关键词名单.csv");
+	}
 
 	/** 道路网站名和网址的映射（来自站长统计） */
 	public static Map<String, String> loadAllWhiteList() {
-		return _loadWhiteList(FISH_BASE_FILE_PATH + "所有白名单.csv");
+		return _loadMap(FISH_BASE_FILE_PATH + "所有白名单.csv");
 	}
 
 	/** 道路网站名和网址的映射（补充的热门的几个） */
 	public static Map<String, String> loadHotWhiteList() {
-		return _loadWhiteList(FISH_BASE_FILE_PATH + "热门白名单.csv");
+		return _loadMap(FISH_BASE_FILE_PATH + "热门白名单.csv");
 	}
 
 	/**
 	 * 百度,www.baidu.com 腾讯网,qq.com ...
 	 */
-	private static Map<String, String> _loadWhiteList(String filePath) {
+	private static Map<String, String> _loadMap(String filePath) {
 		Map<String, String> chinese2site = new HashMap<>();
 		try {
 			FileReader fileReader = new FileReader(filePath);

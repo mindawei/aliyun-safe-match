@@ -52,9 +52,7 @@ public class TestFishFilter {
 
 	@Test
 	public void testIsFish() throws IOException {
-
-		FishFilter filter = new FishFilter();
-
+		
 		for (TestInfo testInfo : testInfos) {
 
 			File file = new File(testInfo.filePath);
@@ -72,7 +70,7 @@ public class TestFishFilter {
 
 			bufferedReader.close();
 
-			boolean isFish = filter.isFish(testInfo.url, htmlContent);
+			boolean isFish = FishFilter.isFish(testInfo.url, htmlContent);
 			Assert.assertEquals(testInfo.isFish, isFish);
 
 		}

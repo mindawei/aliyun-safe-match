@@ -2,6 +2,7 @@ package safe.fish;
 
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -10,7 +11,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import safe.fish.utils.DomainUtil;
+import safe.fish.utils.DataLoader;
 import safe.fish.utils.XnTool;
 
 /**
@@ -67,7 +68,6 @@ public class PageInfo {
 		parseHtml();
 		
 		System.out.println(this);
-		
 	}
 
 	private void parseHtml() {
@@ -182,8 +182,10 @@ public class PageInfo {
 			return host;
 		} catch (Exception e) {
 		}
-		return null;
+		return "";
 	}
+	
+	private static Set<String> domains = DataLoader.loadDomains();
 	
 	/** 获得主体域名部分， www.baidu.com -> baidu */
 	public static String getDomainByHost(String host) {
@@ -192,7 +194,7 @@ public class PageInfo {
 		}
 		String[] parts = host.split("\\.");
 		for (int i = parts.length - 1; i >= 0; i--) {
-			if (!DomainUtil.domains.contains(parts[i])) {
+			if (!domains.contains(parts[i])) {
 				return parts[i];
 			}
 		}
