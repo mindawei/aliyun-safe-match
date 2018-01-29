@@ -1,6 +1,7 @@
 # 1 背景
-该项目的代码是参加 
+1. 该项目的代码是参加 
 [阿里云安全算法挑战赛](https://tianchi.aliyun.com/competition/information.htm?raceId=231585) 时写的。主要利用规则和正则表达式，排名第29。
+2. 为了更好地理解项目，对项目进行了重构，保留了处理的主体部分。
 
 # 2 解题思路
 
@@ -16,7 +17,24 @@
 
 
 # 3 项目结构
-1. `alibaba.safe.utls.decode` 包中是一些解码类。[TestDecoder](https://github.com/mindawei/aliyun-safe-match/blob/master/src/test/java/alibaba/safe/decode/TestDecoder.java) 类对解析进行了测试，也说明了如何使用它们。
 
-2. `alibaba.safe.fish.find` 包中主要用来寻找钓鱼网站。
-
+```
+| - safe.fish 判断钓鱼网站的主体逻辑包
+| ----  | DomainConflictChecker.java 跟网页本身的一些链接冲突进行判断
+| ----  | FishFilter.java 判断钓鱼网站的入口类，主体逻辑
+| ----  | PageInfo.java 根据URL、HTML解析出的网页信息对象
+| ----  | PageKeyChecker.java 根据网页文本中的关键字进行检查
+| ----  | Result.java 检测结果枚举类
+| - safe.fish.utils  判断钓鱼网站的工具类
+| ----  | DataLoader.java 加载文件中的数据
+| ----  | TitleDivider.java 从网页标题中获取关键字
+| ----  | XnTool.java 解析xn--的网址中的中文
+| ----  | ZhushiUtil.java 去掉一些注释
+| - safe.fish.whitelist  中文到域名的映射包
+| ----  | ChineseDns.java 构建中文到域名的映射
+| ----  | SpiderOfChinaz.java 爬取站长之家的域名数据
+| - safe.webshell 判断webshell的主体逻辑包
+| ----  | Decoder.java 解码类
+| ----  | TextChecker.java 判断文本是否可以执行
+| ----  | WebShellDetector.java 对网址参数进行检测
+```
