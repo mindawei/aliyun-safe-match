@@ -16,41 +16,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>com.aliyun.odps</groupId>
-			<artifactId>odps-sdk-mapred</artifactId>
-			<version>0.20.7</version>
-		</dependency>
-
-		<!--dependency> <groupId>com.aliyun.odps</groupId> <artifactId>odps-sdk-mapred</artifactId> 
-			<version>0.20.7</version> </dependency -->
-
-		<dependency>
-			<groupId>com.aliyun.odps</groupId>
-			<artifactId>odps-sdk-graph</artifactId>
-			<version>0.20.7</version>
-		</dependency>
-
-
-		<!-- 自己添加 -->
-		<dependency>
-			<groupId>com.aliyun.odps</groupId>
-			<artifactId>odps-sdk-commons</artifactId>
-			<version>0.20.7-public</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.aliyun.odps</groupId>
-			<artifactId>odps-sdk-core</artifactId>
-			<version>0.20.7-public</version>
-		</dependency>
-
-		<dependency>
-			<groupId>gov.nist.math</groupId>
-			<artifactId>jama</artifactId>
-			<version>1.0.3</version>
-		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>

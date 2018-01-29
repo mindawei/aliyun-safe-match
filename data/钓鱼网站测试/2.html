@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0030)http://www.66cpc.com/index.html# -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=8" /> 
+  <title>TTXCPS,老联盟,信誉高,日付广告联盟,日付联盟,cpa广告联盟,cps广告联盟</title> 
+  <meta name="keywords" content="TTXCPS,老联盟,信誉高,日付广告联盟,日付联盟,cpa广告联盟,cps广告联盟,推广联盟,网站推广，直链广告联盟,cpa广告联盟，日付广告联盟" /> 
+  <meta name="description" content="TTXCPS创立于2013.11.8,自成立以来一直坚守“汇聚力量，共创价值”的理念，主要为广大站长和广告商提供CPA，CPS等网络广告服务，包括聊天室、播放器、游戏、婚恋交友、软件等主流cpa广告，并长期致力于网络广告的研究、策划、营销与发展，用心服务，力求“创业、创新、合作、共赢”，争做优秀的广告联盟平台，期待与广告主和网站主一起成长/" /> 
+  <style>
+@font-face{font-family:"Diediedie";src:url("images/diediedie.ttf");}
+#djs{
+position:absolute;
+top:590px;
+left:55%;
+clear:both;
+width:400px;
+height:30px;
+line-height:30px;
+font-size:14px;
+color:#644d3d;
+-moz-transform:rotate(35deg);
+-webkit-transform:rotate(35deg);
+-o-transform:rotate(35deg);  
+-ms-transform:rotate(35deg); 
+transform:rotate(35deg);
+display:none;
+}
+#djs .day,#djs .hour,#djs .minute,#djs .second{
+float:left;
+font-size:12px;
+}
+#djs span{
+font-family:"Diediedie";
+font-size:26px;
+}
+</style> 
+  <link href="/templates/css/flexslider.css" rel="stylesheet" type="text/css" /> 
+  <script src="/templates/js/common.js"></script> 
+  <script type="text/javascript" src="/templates/js/jquery.flexslider-min.js"></script> 
+  <link href="/templates/css/css.css" rel="stylesheet" type="text/css" /> 
+  <script language="javascript" src="/templates/js/jquery1.9.0(1).js"></script> 
+  <script language="javascript" src="/templates/js/lunbo.js?_vv=20080808"></script> 
+  <link href="css/msstyle.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" charset="UTF-8" src="js/loginweb.js"></script> 
+  <script type="text/javascript" charset="UTF-8" src="js/user.js"></script> 
+  <script>
+$(function(){
+	$('.flexslider').flexslider({
+		animation: "fade",
+		direction:"horizontal",
+		easing:"swing",
+		slideshowSpeed: 10000,
+		directionNav: false,
+		slideToStart:0,
+		slideshow: true
+	});
+	$('.adstyle').flexslider({
+		animation: "slide",
+		direction:"horizontal",
+		easing:"swing",
+		slideshowSpeed: 3000,
+		directionNav: false,
+		slideToStart:0,
+		slideshow: true
+	});
+// time
+countDown("2014/12/25 00:00:00",".day",".hour",".minute",".second");
+setTimeout("$(\"#djs\").fadeIn(1000)",1000);
+});
+
+
+/* get server time begin*/
+function get_server_time(){
+	var xmlHttp = false;
+	//获取服务器时间
+	try {
+		xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+		try {
+			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+		} catch (e2) {
+			xmlHttp = false;
+		}
+	}
+	if (!xmlHttp && typeof XMLHttpRequest != 'undefined') {
+		xmlHttp = new XMLHttpRequest();
+	}
+	xmlHttp.open("GET", window.location.href.toString(), false);
+	xmlHttp.setRequestHeader("If-None-Match", "bytes=-1");
+	xmlHttp.setRequestHeader("Cache-Control","no-cache");
+	xmlHttp.send(null);
+	return new Date(xmlHttp.getResponseHeader("Date"));
+}
+/* get server time end*/
+function countDown(time,day_elem,hour_elem,minute_elem,second_elem){
+	var end_time = new Date(time).getTime(),sys_second = (end_time-new Date(get_server_time()).getTime())/1000;
+	var timer = setInterval(function(){
+		if (sys_second > 0) {
+			sys_second -= 1;
+			var day = Math.floor((sys_second / 3600) / 24);
+			var hour = Math.floor((sys_second / 3600) % 24);
+			var minute = Math.floor((sys_second / 60) % 60);
+			var second = Math.floor(sys_second % 60);
+			day_elem && $(day_elem).html("<span>" + day + "</span>天");
+			$(hour_elem).html("<span>" + hour + "</span>小时");
+			$(minute_elem).html("<span>" + minute + "</span>分钟");
+			$(second_elem).html("<span>" + second + "</span>秒");
+		} else { 
+			clearInterval(timer);
+		}
+	}, 1000);
+}
+</script> 
+ </head> 
+ <body class="bodycolor" style="zoom: 1;">
+  <div id="loginbg"></div> 
+  <div id="jiuye"> 
+   <div class="loginbt"> 
+    <div class="loginfl">
+     会员登录
+    </div> 
+    <div class="loginfr">
+     <a id="closeLayer" onclick="closeMe()">X</a>
+    </div> 
+   </div> 
+   <div class="loginnr"> 
+    <ul> 
+     <input name="weburlz" id="weburlz" type="hidden" value="http://l0086qtt.com/" /> 
+     <li><span>用户名：</span><input class="wenbenkuang" name="username" type="text" id="username" style="width:220px; height:26px;" /></li> 
+     <li><span>密 码 ：</span><input class="wenbenkuang" name="userpassword" type="password" id="userpassword" style="width:220px; height:26px;" /></li> 
+     <li>
+      <dt>
+       <dl>
+        <a href="#" onclick="userlogin();" class="u-now">登 录</a>
+       </dl> 
+       <dl>
+        <a href="reg.php">注册会员</a>
+       </dl>
+      </dt></li> 
+     <li style="line-height:25px;"><span>咨询邮箱：</span><a href="mailto:ttxcps@126.com">ttxcps@126.com</a></li> 
+     <li style="line-height:25px;"><span>咨询QQ：</span><a href="http://wpa.qq.com/msgrd?V=1&amp;uin=2677777739" target="_blank">2677777739</a></li> 
+    </ul> 
+   </div> 
+  </div>
+  <script>
+document.body.style.overflow = 'hidden';
+var ie6 = !-[1,]&&!window.XMLHttpRequest;
+ie6 || loadImg.init();
+</script>  
+  <script>
+$(function(){
+	$('.nav li').hover(function() {
+  		$(this).find('.menu').stop(true, true).fadeIn();
+	}, function() {
+  	$(this).find('.menu').stop(true, true).hide();
+	});	
+	
+})
+
+//center();
+setTimeout(center,1000*1);
+</script> 
+  <div class="head"> 
+   <ul> 
+    <li class="f1"> <a href="" class="logo"></a> </li> 
+    <li class="user"> <a href="#" onclick="center()" class="login">登录</a> <a href="nreg.php">注册</a> </li> 
+    <li class="nav"> <a href="index.php" class="on">联盟首页</a> <a href="newlist.php">联盟公告</a> <a href="nhelp.php">常见问题</a> <a href="nabout.php">联系我们</a> </li> 
+   </ul> 
+  </div>
+  <div class="banner_ad"> 
+   <p></p> 
+   <p></p> 
+   <p> </p> 
+   <p></p> 
+   <!--在P标签里面写文字---> 
+  </div> 
+  <div class="banner"> 
+   <div class="flexslider"> 
+    <ul class="slides"> 
+     <li style="display: list-item;">
+      <div class="img1"></div></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div class="main pt4"> 
+   <div class="con"> 
+    <div class="news yline"> 
+     <!--<h2>最新公告</h2>--> 
+     <ul> 
+      <li class="title"> <a href="sm.htm" target="_blank"> <span style="color:#E53333;"> [置顶]“抵制网络色情 净化网络环境”声明</span></a> </li> 
+      <li class="clear"></li> 
+      <li class="title"><span>[2016-08-13]</span> <a href="javascript:" onclick="xianshi(1)">08月13日佣金已结算!</a></li> 
+      <li class="title" id="nr1" style="display:none;">08月13日佣金已结算,请大家查收,有问题请联系推广经理!</li> 
+      <li class="title"><span>[2016-08-12]</span> <a href="javascript:" onclick="xianshi(2)">08月12日佣金已结算!</a></li> 
+      <li class="title" id="nr2" style="display:none;">08月12日佣金已结算,请大家查收,有问题请联系推广经理!</li> 
+      <li class="title"><span>[2016-08-11]</span> <a href="javascript:" onclick="xianshi(3)">08月11日佣金已结算!</a></li> 
+      <li class="title" id="nr3" style="display:none;">08月11日佣金已结算,请大家查收,有问题请联系推广经理!</li> 
+      <li class="title"> <a href="newlist.php" class="more">更多&gt;</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="con"> 
+    <div class="adstyle yline dot_father" style="height: 210px; overflow: hidden;"> 
+     <ul class="slides" style="-webkit-transition: 0.6s; transition: 0.6s; width: 1600%; -webkit-transform: translate3d(-1011px, 0, 0);"> 
+      <li style="display: block; width: 337px; float: left;" class="clone"> <img src="/templates/img/ad_icon6.png" /><br /> <strong>精彩活动</strong><br /> 感恩送礼、砸金蛋、下线大赛精彩纷呈赢大礼！ </li> 
+      <li style="width: 337px; float: left; display: block;" class="clone"> <img src="/templates/img/ad_icon1.png" /><br /> <strong>CPC点击广告</strong><br /> 单价业内领先，多样式点击率高，收入倍增！ </li> 
+      <li style="display: block; width: 337px; float: left;"> <img src="/templates/img/ad_icon2.png" /><br /> <strong>CPM弹出广告</strong><br /> 众多轮播广告，双模式弹出率强，实时快速！ </li> 
+      <li style="display: block; width: 337px; float: left;"> <img src="/templates/img/ad_icon3.png" /><br /> <strong>CPV富媒体广告</strong><br /> 右下角，对联全都有。展示计费，深受欢迎！ </li> 
+      <li style="display: block; width: 337px; float: left;"> <img src="/templates/img/ad_icon5.png" /><br /> <strong>下线提成</strong><br /> 好广告岂能独享？推荐下线奖励首次结算20%！ </li> 
+      <li style="display: block; width: 337px; float: left;"> <img src="/templates/img/ad_icon4.png" /><br /> <strong>移动客户端支持</strong><br /> 全面支持Android、ios移动广告，高价又省事！ </li> 
+      <li style="display: block; width: 337px; float: left;"> <img src="/templates/img/ad_icon6.png" /><br /> <strong>精彩活动</strong><br /> 感恩送礼、砸金蛋、下线大赛精彩纷呈赢大礼！ </li> 
+     </ul> 
+     <ol>
+      <li><a class=""></a></li>
+      <li><a class=""></a></li>
+      <li><a class="active"></a></li>
+      <li><a class=""></a></li>
+      <li><a class=""></a></li>
+      <li><a class=""></a></li>
+     </ol>
+    </div> 
+   </div> 
+   <div class="con"> 
+    <div class="news yline"> 
+     <!--这是下面第三个版块的图片路径---> 
+     <div style="text-align:center; padding-top:30px;">
+      <img src="/templates/img/a_d2.png" />
+     </div> 
+    </div> 
+   </div> 
+   <div class="con"> 
+    <div class="qq"> 
+     <ul> 
+      <li> <span class="fl">&nbsp;&nbsp;&nbsp;&nbsp;网站主：</span> 
+       <div class="qq1"> 
+        <a href="tencent://message/?uin=2677777739&amp;Site=客服&amp;Menu=yes" target="blank"> <img name="qq" src="/templates/img/qq.bmp" align="absmiddle" /></a> 
+       </div> </li> 
+     </ul> 
+    </div> 
+    <script type="text/javascript">
+(function($){
+	$.fn.snow = function(options){
+	var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px'}).html('&#10052;'),
+	documentHeight 	= $(document).height(),
+	documentWidth	= $(document).width(),
+	defaults = {
+		minSize		: 10,
+		maxSize		: 20,
+		newOn		: 1000,
+		flakeColor	: "#FFFFFF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+	},
+	options	= $.extend({}, defaults, options);
+	var interval= setInterval( function(){
+	var startPositionLeft = Math.random() * documentWidth - 100,
+	startOpacity = 0.5 + Math.random(),
+	sizeFlake = options.minSize + Math.random() * options.maxSize,
+	endPositionTop = documentHeight - 200,
+	endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+	durationFall = documentHeight * 10 + Math.random() * 5000;
+	$flake.clone().appendTo('body').css({
+		left: startPositionLeft,
+		opacity: startOpacity,
+		'font-size': sizeFlake,
+		color: options.flakeColor
+	}).animate({
+		top: endPositionTop,
+		left: endPositionLeft,
+		opacity: 0.2
+	},durationFall,'linear',function(){
+		$(this).remove()
+	});
+	}, options.newOn);
+    };
+})(jQuery);
+$(function(){
+    $.fn.snow({ 
+	    minSize: 6, /* 定义雪花最小尺寸 */
+	    maxSize: 50,/* 定义雪花最大尺寸 */
+	    newOn: 250  /* 定义密集程度，数字越小越密集 */
+    });
+});
+</script> 
+   </div> 
+  </div> 
+  <div class="foot"> 
+   <ul> 
+    <b></b> 
+    <a href="http://xnb.geliujie.com/" target="_blank">日付广告联盟</a>　|　 
+    <a href="http://xnb.geliujie.com/" target="_blank">cpa广告联盟</a>　|　 
+    <a href="http://xnb.geliujie.com/" target="_blank">TTXCPS广告联盟</a>  
+    <li>Copyright @ 2006-2015 TTXCPS All rights reserved. TTXCPS点击联盟(TTXCPS) 版权所有 上海信桢网络科技有限公司 沪ICP备15036513号-7</li> 
+    <a id="_pinganTrust" target="_blank" href="http://c.trustutn.org/show?type=1&amp;sn=201511171004577302"><img src="http://c.trustutn.org/images/cert/cert_0_1.png" /></a> 
+    <div style="display:none"> 
+     <script language="javascript" type="text/javascript" src="http://js.users.51.la/16265536.js"></script> 
+     <noscript>
+      <a href="http://www.51.la/?16265536" target="_blank"><img alt="我要啦免费统计" src="http://img.users.51.la/16265536.asp" style="border:none" /></a>
+     </noscript> 
+    </div> 
+   </ul>  
+  </div>  
+ </body>
+</html>
