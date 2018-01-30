@@ -1,4 +1,4 @@
-package safe.utils;
+package safe.fish.utils;
 
 import org.junit.Assert;
 import org.junit.Test;
