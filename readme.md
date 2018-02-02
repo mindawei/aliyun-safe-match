@@ -6,11 +6,11 @@
 # 2 QuickStart
 1. 需要配置maven环境。
 2. 下载并导入项目，将lib下的sun.misc.BASE64Decoder.jar添加项目中。
-3. 运行 [`src/test/java/safe/fish/TestFishFilter.java`](https://github.com/mindawei/aliyun-safe-match/blob/master/src/test/java/safe/fish/TestFishFilter.java) 可使用钓鱼网站检测功能。钓鱼网站检测功能接口如下所示。
+3. 运行 [`src/test/java/safe/fish/TestFishFilter.java`](https://github.com/mindawei/aliyun-safe-match/blob/master/src/test/java/safe/fish/TestFishFilter.java) 可使用钓鱼网站检测功能。钓鱼网站检测功能接口如下。
 ```
 FishFilter.isFish(String URL,String HTML)  // 静态方法，传入url和网页内容
 ```
-4. 运行 [`src/test/java/safe/webshell/TestWebShellDetector.java`](https://github.com/mindawei/aliyun-safe-match/blob/master/src/test/java/safe/webshell/TestWebShellDetector.java) 可使用WebShell检测功能。WebShell检测功能接口如下所示。
+4. 运行 [`src/test/java/safe/webshell/TestWebShellDetector.java`](https://github.com/mindawei/aliyun-safe-match/blob/master/src/test/java/safe/webshell/TestWebShellDetector.java) 可使用WebShell检测功能。WebShell检测功能接口如下。
 ```
 WebShellDetector.isWebShell(String postData)  // 静态方法，传入网址后面带的参数或者上传内容
 ```
