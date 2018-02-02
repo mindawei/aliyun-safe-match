@@ -3,20 +3,33 @@
 [阿里云安全算法挑战赛](https://tianchi.aliyun.com/competition/information.htm?raceId=231585) 时写的。主要利用规则和正则表达式，排名第29。
 2. 为了更好地理解项目，对项目进行了重构，保留了处理的主体部分。
 
-# 2 大致解题思路
+# 2 QuickStart
+1. 需要配置maven环境。
+2. 下载并导入项目，将lib下的sun.misc.BASE64Decoder.jar添加项目中。
+3. 运行 [`src/test/java/safe/fish/TestFishFilter.java`](https://github.com/mindawei/aliyun-safe-match/blob/master/src/test/java/safe/fish/TestFishFilter.java) 可使用钓鱼网站检测功能。钓鱼网站检测功能接口如下所示。
+```
+FishFilter.isFish(String URL,String HTML)  // 静态方法，传入url和网页内容
+```
+4. 运行 [`src/test/java/safe/webshell/TestWebShellDetector.java`](https://github.com/mindawei/aliyun-safe-match/blob/master/src/test/java/safe/webshell/TestWebShellDetector.java) 可使用WebShell检测功能。WebShell检测功能接口如下所示。
+```
+WebShellDetector.isWebShell(String postData)  // 静态方法，传入网址后面带的参数或者上传内容
+```
 
-## 2.1 钓鱼网站判断</h2>
+
+# 3 大致解题思路
+
+## 3.1 钓鱼网站判断</h2>
 * 爬取“站长之家”的网站域名，建立白名单（中文关键字到网站的地址映射表）<br>
 * 解析网页,获取关键字<br>
 * 根据关键字查询白名单<br>
 
-## 2.2 WebShell通信检测</h2>
+## 3.2 WebShell通信检测</h2>
 * 列举恶意代码，如：eval call_user_func 等<br>
 * 写出恶意代码的正则表达式<br>
 * 进行正则表达式匹配<br>
 
 
-# 3 项目结构
+# 4 项目结构
 * 测试文件夹 `test` 中的代码可以帮助理解一些代码的使用。
 * `data` 文件下存放了一些项目需要使用的数据。
 * 跟钓鱼网站相关的代码都在 `safe.fish` 包中，其中 `FishFilter.java` 是入口类。
